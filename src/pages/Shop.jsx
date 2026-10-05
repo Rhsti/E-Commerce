@@ -1,7 +1,14 @@
-
+import useProducts from '../hooks/useProducts'
 function Shop() {
+  const {products} = useProducts()
+  console.log(products);
+  
   return (
-    <div>Shop</div>
+    <div>
+      <h2>Shop</h2>
+       
+       
+    </div>
   )
 }
 
