@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Shop from "./pages/Shop"
 import Home from "./pages/Home"
+import Header from "./components/Header"
 
 
 function App() {
@@ -12,11 +13,9 @@ function App() {
     <Navbar/>
 
     {/* header */}
-    <header className="bg-blue-200 h-40">   
-      header   
-    </header>
+   <Header/>
   {/* main */}
-  <main className="bg-gray-700 min-h-screen">
+  <main className="bg-gray-200 min-h-screen">
   <Routes >
     <Route path="/" element={<Home/>}/>
     <Route path="/shop" element={<Shop/>}/>
@@ -24,7 +23,7 @@ function App() {
   </main>
  
  {/* footer */}
- <footer className="bg-gray-900 h-40">
+ <footer className="bg-slate-900 h-40">
   footer
  </footer>
   </div>

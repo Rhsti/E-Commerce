@@ -1,15 +1,24 @@
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
-    <NavLink className='bg-red-600 h-40' >
+    <nav className='bg-slate-900 max-h-50 
+     text-white flex justify-around items-center p-7'>
       
      <Link to='/'>My Store</Link>
      <div>
         <Link to={'/'}>Home</Link>
         <Link to={'/shop'}>Shop</Link>
+        <Link to={'/shop'}>Favorites</Link>
+
      </div>
-    </NavLink>
+     <div>
+      <Link>Cart</Link>
+      <Link></Link>
+     </div>
+
+
+    </nav>
   )
 }
 
