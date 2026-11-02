@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import Category from '../components/Category';
 import Header from '../components/Header';
+import ProductList from '../components/ProductList';
 import useProducts from '../hooks/useProducts';
 function Home() {
 const { products} = useProducts();  
+ 
+const [selectedCategory,setSelectedCategory] = useState('all');
+
+const productFilter = 
+selectedCategory === 'all' ? 
+products : products.filter((product) => product.category === selectedCategory)
 return (
  <>
        {/* header */}
@@ -10,7 +18,11 @@ return (
     
     {/* main */}
    <main >
-    <Category products={products}/>
+    <Category products={products} setSelectedCategory={setSelectedCategory}/>
+
+    {/* ProductList */}
+    <ProductList productFilter={productFilter} setSelectedCategory={setSelectedCategory}/>
+   
     
     {/* <div>
        <ul>

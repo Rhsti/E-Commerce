@@ -21,7 +21,7 @@ function App() {
   </main>
  
  {/* footer */}
- <footer className="bg-slate-900 h-40">
+ <footer className="bg-slate-900 h-80">
   footer
  </footer>
   </div>
