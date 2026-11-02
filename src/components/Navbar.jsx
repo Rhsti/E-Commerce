@@ -20,7 +20,7 @@ function Navbar() {
      <Link className=" absolute top-8 left-10 md:top-6 md:left-14"  to='/'><strong>My</strong>Store</Link>
      <div className="hidden md:flex gap-4 flex-col md:flex-row items-center md:gap-8">
         <Link to={'/'}>Home</Link>
-        <Link to={'/shop'}>Shop</Link>
+        <Link to={'/shop'} >Shop</Link>
         <Link to={'/shop'}>Product Details</Link>
      </div>
      <div className=" hidden md:flex  items-center gap-8">
@@ -37,9 +37,9 @@ function Navbar() {
       {isOpen && (
      <>
      <div className="  md:hidden flex gap-4 flex-col md:flex-row items-center md:gap-8">
-        <Link to={'/'}>Home</Link>
-        <Link to={'/shop'}>Shop</Link>
-        <Link to={'/shop'}>Product Details</Link>
+       <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+        <Link to={'/shop'} onClick={() => setIsOpen(false)}>Shop</Link>
+        <Link to={'/shop'} >Product Details</Link>
      </div>
      <div className="md:hidden  flex  items-center gap-8">
       <Link><IoCartOutline size={25} /></Link>

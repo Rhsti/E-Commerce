@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Shop from "./pages/Shop"
 import Home from "./pages/Home"
-import Header from "./components/Header"
 
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
       {/* Navbar */}
     <Navbar/>
 
-    {/* header */}
-   <Header/>
+  
   {/* main */}
   <main className="bg-gray-200 min-h-screen">
   <Routes >
