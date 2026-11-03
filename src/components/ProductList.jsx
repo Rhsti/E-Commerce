@@ -16,15 +16,18 @@ function ProductList({productFilter, setSelectedCategory}) {
        gap-6  md:pt-25 px-5 pt-20 ">
 
         {products.map((product) => (
-            <div className=" bg-sky-100  w-full h-120 
+            <div className=" bg-sky-100  w-full h-125
             rounded-2xl " >
             <img className="w-full h-80 object-cover 
              rounded-xl p-3 " src={product.image} alt={product.title} />
-            <p className="pl-1 font-bold mb-1" key={product._id}>{product.title}</p>
-             <p className="pl-1  mb-1">Rating {product.rating}</p>
-             <p className="pl-1 ">${product.price}</p>
+            <p className="pl-1 font-bold mb-1 text-2xl" key={product._id}>{product.title}</p>
+             <p className="pl-1  mb-1 ">Rating {product.rating}</p>
+             <p className="pl-1  mb-3 text-2xl font-bold  ">${product.price}</p>
+             <div className="w-full px-4">
+
              <button className='bg-black rounded-2xl
-              py-2 px-19  text-white cursor-pointer'>Add to Cart</button>
+              py-2 w-full text-white cursor-pointer '>Add to Cart</button>
+            </div>
             </div>
         ))}
        </div>
